@@ -1,0 +1,1079 @@
+*{
+    margin: 0;
+    padding: 0;
+    top: 0;
+    box-sizing: border-box;
+}
+body {
+  font-family: Arial,'Century Gothic', 'Roboto',sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+.main-logo-pic, .inner-logo-pic{
+  float: left;
+  filter: hue-rotate(138deg);
+}
+.innerlogoh1{
+  display: none;
+}
+.inner-logo-pic{
+  display: none;
+}
+.auto-text p{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #d8cccc;
+}
+
+
+p{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #2d2d2d;
+}
+/* Header styling */
+header {
+  background-color: #0e0e0e;
+  color: #fff;
+  padding: 15px;
+  display: flex; /* Add this to make the header a flex container */
+  justify-content: space-between; /* Align items horizontally */
+  align-items: center; /* Center items vertically */
+}
+h2{
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+  display: flex; /* Add this to make the navigation a flex container */
+}
+
+nav {
+    margin-left: auto;
+    padding-right: 30px;
+    height: 40px;
+}
+nav li {
+  margin-left: 60px /* Change margin-left to margin-right */
+}
+
+nav a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  /* Add position relative to contain pseudo-element */
+}
+
+/* Hover effect */
+nav a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #e74828;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+/* Auto slider styling */
+.auto-slider {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  height: 400px;
+  background: linear-gradient(to right, #02102c, #0d2c14);
+}
+
+.auto-text h2{
+  flex: 1;
+  font-size: 30px;
+  margin-top: 22px;
+  height: 38px;
+  color: rgb(198, 186, 53);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.logos-slider {
+  height: 100px;
+  /* Adjust height according to logo size */
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.logos-slider img {
+  width: 100px;
+  /* Adjust width as needed */
+  height: 100px;
+  /* Adjust height as needed */
+  margin-right: 50px;
+  /* Adjust spacing between logos */
+}
+
+.logos-slider {
+  width: 60%;
+  /* Set the desired width of the slider */
+  overflow: hidden;
+  margin: 0 auto;
+  /* Center the slider */
+}
+
+.logos-container {
+  display: flex;
+  animation: slide-logos 20s linear infinite;
+  
+  /* Adjust the duration (20s) as needed */
+}
+
+@keyframes slide-logos {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-200px);
+  }
+
+  /* Adjust the translateX value based on the total width of logos */
+}
+
+.menu-icon {
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+  display: none;
+  /* Hide the menu icon by default on larger screens */
+}
+
+
+/* CSS FOR LOGIN SIGNUP PAGE */
+/* *************** */
+
+.btn {
+  display: inline-block;
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  margin: 30px 0;
+  border-radius: 30px;
+  margin-left: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(57, 57, 56);
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.col-2 {
+  padding: 50px;
+  flex: 1;
+}
+
+.footer {
+  background: #000;
+  color: #8a8a8a;
+  font-size: 15px;
+  padding: 60px 0 20px;
+
+}
+
+.footer h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  color: #8a8a8a;
+}
+
+
+.fo-col-1,
+.fo-col-2,
+.fo-col-3 {
+  min-width: 333px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+}
+
+.fo-col-2 {
+  padding-bottom: 20px;
+}
+
+.fo-col-1,
+.fo-col-3 {
+  padding-bottom: 45px;
+}
+
+.fo-col-2,
+.fo-col-3 {
+  flex-basis: 12%;
+  text-align: center;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.footer hr {
+  border: none;
+  background: radial-gradient(#e74828, #e74828);
+  height: 2px;
+  margin: 15px 0;
+  width: 100%;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.account-page {
+  padding: 50px 0;
+  background: radial-gradient(#ffffff, #faf5f5);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ------------blog page--------------- */
+
+
+/* Slider styles */
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-container {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  height: 400px;
+  /* Adjust the height as needed */
+  object-fit: cover;
+}
+
+/* Additional styling for better appearance */
+.slider {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+
+/* Basic styles */
+
+
+
+
+
+
+
+
+
+
+
+/* ---------customer_profile */
+
+
+body.customer-profile {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.container-cust {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+.blur-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('./images/make_a_picture_for_my_clothing_line__1_-removebg-preview.png'); /* Replace with the actual path to your background image */
+    background-size: cover;
+    filter: blur(10px); /* Adjust the blur intensity as needed */
+}
+
+.profile-form-cust {
+  margin: 20px;
+  display: inline-block;
+  background-color: rgba(174, 187, 186, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+}
+
+.profile-form-cust h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-form-cust label {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.profile-form-cust input,
+.profile-form-cust select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.profile-form-cust button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.profile-form-cust button:hover {
+  background-color: #45a049;
+}
+
+
+
+/* Optional: Apply blurring effect */
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  pointer-events: none;
+}
+/* Blog Sections styles */
+.blog-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.blog-item {
+  width: 80%;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-image img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.blog-content h2 {
+  margin-bottom: 10px;
+}
+
+.blog-content p {
+  margin-bottom: 20px;
+}
+
+.blog-content a {
+  color: #333;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.blog-content a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+
+/*  customer-dashboard page-----------------*/
+body.custdashb {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.container-custdb {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.welcome-message {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* .tables-container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+} */
+
+.table-container {
+  background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.table-container h3 {
+  margin-bottom: 10px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.edit-button,
+.delete-button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  background-color: #45a049;
+}
+
+
+
+
+
+
+
+
+
+
+.form-contain {
+  background: white;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  text-align: center;
+  padding: 20px 0;
+  margin: auto;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.form-contain span {
+  font-weight: bold;
+  padding: 0 10px;
+  color: #555;
+  cursor: pointer;
+  width: 120px;
+  display: inline-block;
+}
+
+.form-btn {
+  display: inline-block;
+}
+
+.form-contain form {
+  max-width: 300px;
+  padding: 0 20px;
+  position: absolute;
+  top: 130px;
+  transition: transform 1s;
+}
+
+form input {
+  width: 100%;
+  height: 30px;
+  margin: 10px 0;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+}
+
+form .btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+#LoginForm {
+  left: -300px;
+}
+
+#RegForm {
+  left: 0;
+}
+
+form a {
+  font-size: 12px;
+}
+
+#Indicator {
+  width: 100px;
+  border: none;
+  background: #e74828;
+  margin-left: 27px;
+  height: 3px;
+  margin-top: 8px;
+  transform: translateX(100px);
+  transition: transform 1s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media query for home page */
+/* Add your existing CSS styles here */
+
+/* Responsive styles */
+/* Add your existing CSS styles here */
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+
+  /* Adjust header styles for smaller screens */
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-icon {
+    display: block;
+    /* Show the menu icon on smaller screens */
+  }
+  .inner-logo-pic{
+    display: unset;
+  }
+  .main-logo-pic{
+    display: none;
+  }
+  .logoh1{
+    display: none;
+  }
+  .innerlogoh1{
+    display: unset;
+  }
+  .row {
+      text-align: center;
+  }
+  .col-2 {
+      padding: 20px 0;
+  }
+  .fo-col-1 {
+      text-align: center;
+  }
+  .table-container {
+    padding: 10px;
+    width: 90%;
+
+  }
+
+  table {
+    font-size: 12px;
+  
+  }
+  table tr{
+    width: 100px;
+  }
+
+  .edit-button,
+  .delete-button {
+    font-size: 12px;
+  }
+  .slider {
+    height: 300px;
+  }
+
+  .blog-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-image img {
+    width: 80%;
+    height: auto;
+  }
+
+  .nav-links {
+    display: none;
+    /* Hide the navigation links by default on smaller screens */
+    flex-direction: column;
+    align-items: center;
+    background-color: #0e0e0e;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+  }
+  .login-pic{
+   display: none;
+  }
+
+  .nav-links li {
+    margin-bottom: 10px;
+  }
+
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+  }
+
+  /* Show the navigation links when the menu icon is clicked */
+  .nav-links.show {
+    display: flex;
+  }
+
+  nav {
+    padding-right: 0;
+    margin-top: 20px;
+  }
+
+  
+  nav li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .auto-text h2 {
+      font-size: 15px;
+      
+  }
+  .auto-text p {
+    font-size: 10px;
+  }
+
+  /* Adjust auto-slider styles for smaller screens */
+  .auto-slider {
+    padding: 30px 10px;
+    height: auto;
+  }
+
+  .auto-text {
+    padding-bottom: 20px;
+  }
+
+  .image-slider img {
+    display: none;
+  }
+
+  /* Adjust service section styles for smaller screens */
+  .service-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .service-img,
+  .hover-img {
+    width: 100%;
+    height: auto;
+    max-width: 280px;
+  }
+
+  /* Adjust client reviews section styles for smaller screens */
+  .client-reviews {
+    padding: 20px;
+  }
+
+  .review .last-review {
+    width: 50%;
+  }
+
+  .last-review{
+    display: none;
+  }
+  .review p{
+    font-size: 10px;
+  }
+  .join-btn {
+    font-size: 5px;
+  }
+
+  /* Footer styles for smaller screens */
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .footer-links a {
+    margin-right: 0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .social-links {
+    margin-top: 20px;
+  }
+
+  .social-icon {
+    margin: 5px;
+  }
+
+  /* Adjust logo slider styles for smaller screens */
+  .logos-slider {
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+
+  .logos-slider img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+  }
+}
+
+/* Add more media queries for other screen sizes if needed */
+/* Add more media queries for other screen sizes if needed */
+
+
+.about-section {
+  padding: 40px 0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba}
+/* Add the following CSS in your existing styles.css or in a separate <style> tag in the <head> */
+#popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  width: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#customer-popup,
+#tailor-popup {
+  display: none;
+}
+
+.popup-show #customer-popup {
+  display: block;
+}
+
+.popup-show #tailor-popup {
+  display: block;
+}
+
+
+
+
+
+
+.image-slider-container {
+  position: relative;
+  /* Add this to the slider container */
+}
+.brands{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.box-cloth{
+  width: 100px;
+  height: 100px;
+}
+.image-slider img {
+  width: 300px;
+  height: 300px;
+  margin-left: -340px;
+  margin-bottom: -10px;
+  padding-bottom: 10px;
+  position: absolute;
+  /* Use absolute positioning */
+  top: 0;
+  /* Position images at the top of the container */
+  left: 0;
+  /* Position images at the left of the container */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+/* Button styles */
+.join-btn {
+  background-color: #e74828;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  /* Add transition for smooth effect */
+}
+
+/* Hover effect */
+.join-btn:hover {
+  background-color: black;
+}
+
+.image-slider img.active {
+  opacity: 1;
+}
+
+/* Services section styling */
+.services {
+  padding: 50px;
+}
+.service-container {
+  display: flex;
+}
+
+.service-item {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.left-image .service-img {
+  order: 1;
+  /* Place the image on the left side for this service item */
+  margin-right: 20px;
+}
+
+.right-image .service-img {
+  order: 2;
+  /* Place the image on the right side for this service item */
+  margin-left: 20px;
+}
+
+.service-image {
+  position: relative;
+}
+
+.service-img,
+.hover-img {
+  width: 400px;
+  /* Set the width of the service images */
+  height: 500px;
+  /* Set the height of the service images */
+  object-fit: cover;
+  transition: opacity 1s ease;
+}
+
+.hover-img {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.service-image:hover .hover-img {
+  display: block;
+  opacity: 1;
+  /* Show the hover image on hover */
+}
+
+.service-image:hover .service-img {
+  opacity: 0;
+  /* Hide the main service image during hover */
+}
+.service-text{
+  margin: 10px;
+}
+/* Client Reviews section styling */
+/* Add this CSS to your styles.css file */
+.client-reviews {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.review {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: calc(50% - 20px);
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  
+}
+.last-review{
+  margin-left: 360px;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+}
+
+.client-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.client-name {
+  font-weight: bold;
+}
+
+.stars {
+  display: flex;
+  margin: 10px 0;
+}
+
+.fa-star {
+  color: rgb(255, 153, 0);
+  margin-right: 5px;
+}
+
+.review-text {
+  line-height: 1.6;
+}
+.nav-links
+{
+  z-index: 1
+}

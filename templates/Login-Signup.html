@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>SignUp-Login | StitchXcel</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <img src="static/images/logo.png" height="75px" width="75px" alt="logo" class="main-logo-pic">
+        <h1 class="logoh1">StitchXcel</h1>
+        <nav>
+         
+            
+          <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+          </div>
+          <ul class="nav-links">
+            <img src="static/images/logo.png" height="70px" width="70px"    alt="logo" class="inner-logo-pic">
+            <h2 class="innerlogoh1">StitchXcel</h2>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/tailor" id = "tailor">Tailors</a></li>
+            <li><a href="/about"  id = "about">About</a></li>
+            <li><a href="/login" id="join">Join Us</a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+    <!-- ----------account page------ -->
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2 login-pic">
+                    <img src="static/images/_d8fa865c-e92a-4b59-a3c0-755c5f995ac2.jpg" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="form-contain">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Username" id = "username">
+                            <input type="password" placeholder="Password" id = "password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Forget Password!</a>
+                        </form>
+                        <form id="RegForm">
+                            <input type="text" placeholder="Username"  id = "user_name" required>
+                            <input type="password" placeholder="Password" id = "pass_word" required>
+                            <label for="register-as">Register as:</label>
+                            <select id="user_type" name="register-as" required>
+                                <option value="" disabled selected>Select option</option>
+                                <option value="customer">Customer</option>
+                                <option value="tailor">Tailor</option>
+                            </select>
+                        
+                            <button type="submit" class="btn">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------footer---- -->
+    <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="fo-col-1">
+                <h3>Contact Us</h3>
+                <p>Welcome to StitchXcel, your one-stop destination for professional tailor services.<br> We take pride
+                    in
+                    crafting exquisite
+                    outfits that elevate your style and enhance<br> your confidence. Whether it's custom tailoring,
+                    alterations,
+                    or wedding
+                    attire.</p>
+            </div>
+            <div class="fo-col-2">
+                <h3>Legal Links</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li>Tailors</li>
+                    <li>Join Us</li>
+                    <li>Blogs</li>
+                </ul>
+            </div>
+            <div class="fo-col-3">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 25 25">
+                            <path fill="currentColor"
+                                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+                        </svg>
+                       
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 15 15">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M12.91 12.909c.326-.327.582-.72.749-1.151c.16-.414.27-.886.302-1.578c.032-.693.04-.915.04-2.68c0-1.765-.008-1.987-.04-2.68c-.032-.692-.142-1.164-.302-1.578a3.185 3.185 0 0 0-.75-1.151a3.187 3.187 0 0 0-1.151-.75c-.414-.16-.886-.27-1.578-.302C9.487 1.007 9.265 1 7.5 1c-1.765 0-1.987.007-2.68.04c-.692.03-1.164.14-1.578.301a3.2 3.2 0 0 0-1.151.75a3.2 3.2 0 0 0-.75 1.151c-.16.414-.27.886-.302 1.578C1.007 5.513 1 5.735 1 7.5c0 1.765.007 1.987.04 2.68c.03.692.14 1.164.301 1.578c.164.434.42.826.75 1.151c.325.33.718.586 1.151.75c.414.16.886.27 1.578.302c.693.031.915.039 2.68.039c1.765 0 1.987-.008 2.68-.04c.692-.03 1.164-.14 1.578-.301a3.323 3.323 0 0 0 1.151-.75ZM2 6.735v1.53c-.002.821-.002 1.034.02 1.5c.026.586.058 1.016.156 1.34c.094.312.199.63.543 1.012c.344.383.675.556 1.097.684c.423.127.954.154 1.415.175c.522.024.73.024 1.826.024H8.24c.842.001 1.054.002 1.526-.02c.585-.027 1.015-.059 1.34-.156c.311-.094.629-.2 1.011-.543c.383-.344.556-.676.684-1.098c.127-.422.155-.953.176-1.414C13 9.247 13 9.04 13 7.947v-.89c0-1.096 0-1.303-.023-1.826c-.021-.461-.049-.992-.176-1.414c-.127-.423-.3-.754-.684-1.098c-.383-.344-.7-.449-1.011-.543c-.325-.097-.755-.13-1.34-.156A27.29 27.29 0 0 0 8.24 2H7.057c-1.096 0-1.304 0-1.826.023c-.461.021-.992.049-1.415.176c-.422.128-.753.301-1.097.684c-.344.383-.45.7-.543 1.012c-.098.324-.13.754-.156 1.34c-.022.466-.022.679-.02 1.5ZM7.5 5.25a2.25 2.25 0 1 0 0 4.5a2.25 2.25 0 0 0 0-4.5ZM4.25 7.5a3.25 3.25 0 1 1 6.5 0a3.25 3.25 0 0 1-6.5 0Zm6.72-2.72a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                       
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="25" viewBox="0 0 48 48">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                d="M38.74 16.55v1c0 10.07-7.64 21.61-21.62 21.61A21.14 21.14 0 0 1 5.5 35.71a12.22 12.22 0 0 0 1.81.11a15.25 15.25 0 0 0 9.44-3.24a7.56 7.56 0 0 1-7.1-5.29a6.9 6.9 0 0 0 1.44.15a7.53 7.53 0 0 0 2-.27A7.57 7.57 0 0 1 7 19.72v-.1a7.42 7.42 0 0 0 3.44.94A7.54 7.54 0 0 1 8.05 10.5a21.58 21.58 0 0 0 15.68 7.94a6.38 6.38 0 0 1-.21-1.74a7.55 7.55 0 0 1 13.17-5.31a15.59 15.59 0 0 0 4.83-1.85a7.65 7.65 0 0 1-3.39 4.27a15.87 15.87 0 0 0 4.37-1.26a15.56 15.56 0 0 1-3.76 4Z" />
+                        </svg>
+                      
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2023 - StitchXcel (Tailor Services)
+        </p>
+    </div>
+</div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+                const menuIcon = document.querySelector(".menu-icon");
+                const navLinks = document.querySelector(".nav-links");
+
+                menuIcon.addEventListener("click", function () {
+                    navLinks.classList.toggle("show");
+                });
+            });
+    </script>
+
+
+    <!--------js for form toggle-->
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+            var RegForm = document.getElementById("RegForm");
+
+            var Indicator = document.getElementById("Indicator");
+
+            function register() {
+                RegForm.style.transform = "translateX(0px)";
+                LoginForm.style.transform = "translateX(0px)";
+                Indicator.style.transform = "translateX(100px)";
+            }
+
+            function login() {
+                RegForm.style.transform = "translateX(300px)";
+                LoginForm.style.transform = "translateX(300px)";
+                Indicator.style.transform = "translateX(0px)";
+            }
+    </script>
+    <script>
+        // Handle Login form submission
+        $("#LoginForm").submit(function (e) {
+        e.preventDefault();
+        var formData = {
+            username: $("#username").val(),
+            password: $("#password").val()
+        };
+
+        // Make an AJAX request to post login data to the server
+        $.ajax({
+            type: "POST",
+            url: "/api/login",
+            data: JSON.stringify(formData),
+            contentType: "application/json",
+            dataType: "json",
+            success: function (response) {
+                // Handle success response
+                alert("Login successful!");
+                // Redirect to the appropriate page based on user type
+                if (response['customer_id']) {
+                    window.location.href = "/customer_dashboard";
+                } else if (response['tailor_id']) {
+                    window.location.href = "/tailor_dashboard";
+                } else if (response['user_type'] === 'customer') {
+                    window.location.href = "/customer_profile";
+                } else if (response['user_type'] === 'tailor') {
+                    window.location.href = "/tailor_profile";
+                } else {
+                    window.location.href = "/";
+                }
+
+            },
+            error: function (xhr, status, error) {
+                // Handle error response
+                alert("Login failed.");
+            }
+        });
+        });
+
+        // Handle Registration form submission
+        $("#RegForm").submit(function (e) {
+        e.preventDefault();
+        var formData = {
+            username: $("#user_name").val(),
+            password: $("#pass_word").val(),
+            user_type: $("#user_type").val()
+        };
+
+        // Make an AJAX request to post registration data to the server
+        $.ajax({
+            type: "POST",
+            url: "/api/register",
+            data: JSON.stringify(formData),
+            contentType: "application/json",
+            dataType: "json",
+            success: function (response) {
+                // Handle success response
+                alert("Registration successful!");
+                // Redirect to the appropriate page based on user type
+                window.location.href = "/login";
+            },
+            error: function (xhr, status, error) {
+                // Handle error response
+                alert("Registration failed.");
+            }
+        });
+    });
+    </script>
+</body>
+
+</html>

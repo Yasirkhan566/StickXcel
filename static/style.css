@@ -1,0 +1,615 @@
+
+body
+{
+	font-family: sans-serif;
+	font-variant: small-caps;
+	background: #fafafa;
+	box-sizing: border-box;
+	margin:0;
+}
+p{
+	font-variant: petite-caps;
+	font-family: monospace;
+}
+.tailors-header
+{
+	background: url("./images/ts (3).jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 500px;
+}
+.tailors-header-data
+{
+	width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 266px;
+    color: white;
+    font-size: 30px;
+}
+.tailors-header-data h2, p{
+	color: white;
+}
+.search-section
+{
+	margin-top: -165px;
+}
+.search-parameters
+{
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	column-gap: 20px;
+	background: #292e2f;
+	padding:20px;
+	color: white;
+	font-size: 20px;
+	border-radius: 5px 5px 0 0;
+
+}
+
+.search-section-parameters
+{
+	width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.search-section-parameters .input
+{
+ 	height: 60px;
+ 	width: 250px;
+ 	border:none;
+ 	padding: 0 10px;
+ 	border-radius:2px;
+}
+.search-section-parameters select
+{
+	height: 62px;
+	width: 250px;
+	border:none;
+	padding: 0 10px;
+	border-radius:2px;
+}
+
+#search-btn img
+{
+	width: 50px;
+}
+#search-btn
+{
+	padding: 3px 19px;
+	background: #ffc113;
+	border: none;
+	margin-top: 18px;
+	border-radius: 2px;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.tailor-listing
+{
+	display: flex;
+	column-gap: 20px;
+	width: 80%;
+    width: 80%;
+    box-shadow: 0 0 3px 3px #ede1e1;
+    background: white;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+.flex-item {
+  flex-grow: 1; /* This ensures the columns can grow to fill the remaining space */
+  /* You can add more styles to the columns, such as padding, margin, etc. */
+}
+
+.item1 {
+  flex-basis: 35%; /* Column 1 will have an initial width of 30% of the container */
+}
+
+.item2 {
+  flex-basis: 40%; /* Column 2 will have an initial width of 50% of the container */
+}
+
+.item3 {
+  flex-basis: 25%; /* Column 3 will have an initial width of 20% of the container */
+}
+.tailor-shop-name
+{
+	margin-bottom: 10px;
+}
+.tailor-cover-photo img
+{
+	width: 100%;
+}
+sub
+{
+	color: #766b6b;
+	font-size: 20px;
+}
+
+.tailor-address
+{
+	font-size: 20px;
+}
+
+.price-rating-section
+{
+	text-align: center;
+    margin-top: 38px;
+    font-size: 15px;
+    line-height: 14px;
+}
+
+.favorities-section
+{
+	float: right;
+}
+.favorities-section img
+{
+	margin-top: -20px;
+    margin-right: -20px
+}
+.tailor-rating
+{
+	padding: 20px;
+	border-left: 1px solid gray;
+}
+
+.price-rating-section .price
+{
+	font-size: 30px;
+    margin-bottom: 10px;
+
+}
+.tailor-info
+{
+    font-size: 12px;
+    padding-top: 0;
+    margin-top: -20px
+}
+.fade
+{
+	color: #766b6b;
+}
+
+
+.additional-search-checks
+{
+	display: flex;
+	column-gap: 40px;
+	padding: 20px;
+	border: 1px solid gainsboro;
+	border-radius: 0 0 5px 5px;
+	background: white;
+}
+
+.radio-selector
+{
+	border: 1px solid #d9cdcd;
+	display: flex;
+    background: #ededed;
+    border-radius: 2px;
+}
+
+.radio-circle
+{
+	background: gray;
+}
+.radio-lable
+{
+	padding: 2px 4px;
+}
+
+.hidden-rating
+{
+	display: none;
+}
+
+.parameters-heading
+{
+	margin:5px;
+}
+
+
+
+/*---------------------------------------------------Place Order Form----------------------------------------*/
+.flex{
+	display: flex;
+	flex-wrap: wrap;
+}
+.columns
+{
+	flex-basis: 20%;
+}
+
+label
+{
+	display: block;
+
+	padding: 20px 20px 10px 2px;
+}
+
+input
+{
+	border: navajowhite;
+    height: 30px;
+    border-radius: 50px;
+    box-shadow: 0 0 2px 1px darkmagenta;
+}
+
+.center
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+.form-heading
+{
+	padding: 0 30px;
+}
+.order-form {
+    width: 80%;
+    margin: 30px;
+    background: #ededed;
+    padding: 20px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.order-form input
+{
+	margin: 0 20px 0 0;
+}
+.order-form select
+{
+	margin: 0 20px 0 0;
+}
+.border-none
+{
+	box-shadow: unset !important;
+}
+
+hr
+{
+	margin-top: 40px;
+}
+select
+{
+	height: 30px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 2px 1px darkmagenta;
+}
+
+.full-width
+{
+	width: 100%;
+}
+
+.submit-btn
+{
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px 20px;
+	border-radius: 40px;
+
+}
+
+.submit-btn:hover{
+	background-color: yellow;
+	border:none;
+}
+
+.measurement-guide
+{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.measurement-guide img
+{
+	width: 100%;
+}
+
+/*---------------------------------------------------Place Order Form----------------------------------------*/
+
+
+/*---------------------------------------------------Slider------------------------------------------------*/
+
+.slider-container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+.row
+{
+	justify-content: unset;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1130px) 
+{
+  .search-section-parameters {
+    width: 80%;
+  }
+
+  .search-section {
+    margin-top: -77px;
+  }
+
+  #search-btn img 
+  {
+   	 width: 40px;
+  }
+
+  .search-section-parameters select 
+  {
+  	width: unset;
+  }
+
+  .search-section-parameters .input
+  {
+  	width: unset;
+  }
+
+  .price-rating-section img
+  {
+  	width: 80%;
+  }
+
+}
+
+
+@media screen and (max-width: 950px) 
+{
+	.search-parameters
+	{
+		flex-wrap: wrap;
+	}
+
+
+    .search-section-parameters .input
+    {
+    	height: 40px;
+    }
+
+    .search-section-parameters select
+    {
+    	height: 40px;
+    }
+
+    #search-btn 
+    {
+    	padding: 0 5px;
+	}
+
+	#search-btn img
+	{
+		width: 35px;
+	}
+
+	.tailors-header-data
+	{
+		font-size: 25px;
+	}
+
+	.tailors-header
+	{
+		
+		background-position: right;
+	}
+
+	.search-section
+	{
+		margin-top: -118px;
+	}
+
+	.measurement-guide 
+	{
+    	width: 95%;
+	}
+}
+
+
+
+@media screen and (max-width: 890px) 
+{
+	.search-section 
+	{
+    	margin-top: -106px;
+    }
+
+    .additional-search-checks
+    {
+    	flex-wrap: wrap;
+    }
+
+    .radio-selector
+    {
+    	margin-bottom: 10px;
+    }
+
+    .tailor-info
+    {
+    	font-size: 10px;
+    }
+}
+
+
+@media screen and (max-width: 890px) 
+{
+	.tailor-listing
+	{
+		display: block;
+		padding:0;
+		padding-bottom: 20px;
+		width: 90%;
+	}
+	.tailor-info
+	{
+		display: inline-block;
+	    width: 60%;
+	    margin-top: 0px;
+	    padding-bottom: 42px;
+	    padding-left: 10px;
+	}
+
+	.tailor-rating
+	{
+		width: 30%;
+	    float: right;
+	}
+
+	.favorities-section img 
+	{
+	    margin-top: -15px;
+	    margin-right: 19px;
+	}
+
+	.search-section-parameters .input 
+	{
+    	height: 30px;
+	}
+
+	.search-section-parameters select
+	{
+    	height: 30px;
+	}
+
+	#search-btn img 
+	{
+    	width: 23px;
+	}
+}
+
+@media screen and (max-width: 750px)
+{
+	.tailors-header-data
+	{
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 610px)
+{
+	.tailor-info
+	{
+		display: block;
+		width: 90%;
+	}
+
+	.tailor-rating
+	{
+		float: none;
+		display: none;
+	}
+
+	.hidden-rating
+	{
+		display: flex;
+		align-items: center;
+	}
+
+	.hidden-rating-image img
+	{
+		width: 100px;
+	}
+	.hidden-rating-image
+	{
+		margin-right: 30px;
+	}
+}
+
+
+@media screen and (max-width: 500px)
+{
+	.tailors-header
+	{
+		height: unset;
+	}
+
+	.search-section
+	{
+		margin-top: -232px;
+	}
+}

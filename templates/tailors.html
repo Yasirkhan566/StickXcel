@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tailors</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header>
+    <img src="static/images/logo.png" height="75px" width="75px" alt="logo" class="main-logo-pic">
+    <h1 class="logoh1">StitchXcel</h1>
+    <nav>
+     
+        
+      <div class="menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links">
+        <img src="static/images/logo.png" height="70px" width="70px"    alt="logo" class="inner-logo-pic">
+        <h2 class="innerlogoh1">StitchXcel</h2>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/tailor" id = "tailor">Tailors</a></li>
+        <li><a href="/about"  id = "about">About</a></li>
+        <li><a href="/login" id="join">Join Us</a></li>
+      </ul>
+    </nav>
+  </header>
+	<div class="tailors-header">
+		<div class="tailors-header-data">
+			<h2>Find the Best tailors in Your Area</h2>
+			<p style="color:white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.</p>
+		</div>
+	</div>
+	<div class="search-section">
+		<div class="search-section-parameters">
+			<div class="search-parameters">
+				<div class="keyword-parameter">
+					<p class="parameters-heading">Keyword Search</p>
+					<input type="text" name="keyword" placeholder="Keyword" class="input">
+				</div>
+				<div class="location-parameter">
+					<p class="parameters-heading">Location</p>
+					<input type="text" name="Location" placeholder="Location" class="input">
+				</div>
+				<div class="category-parameter">
+					<p class="parameters-heading">Category</p>
+					<select>
+				        <option value="">Select Category</option>
+				        <option value="category1">Category 1</option>
+				        <option value="category2">Category 2</option>
+				        <option value="category3">Category 3</option>
+     				</select>
+				</div>
+
+				<div class="search-button">
+					<p></p>
+					<button id="search-btn">
+						<img src="static/images/search-icon.png">
+					</button>
+				</div>
+				
+			</div>
+
+			<div class="additional-search-checks">
+				<div class="fulltime radio-selector">
+					
+					<div class="radio-circle"><input type="radio" name="fulltime" class="border-none"></div>
+					<label for="radio" id="fulltime" class="radio-lable">Full Time
+					</label>
+					
+				</div>
+
+
+				<div class="temporary radio-selector">
+					
+					<div class="radio-circle"><input type="radio" name="fulltime" class="border-none"></div>
+					<label for="radio" id="temporary" class="radio-lable">Temporary
+					</label>
+					
+				</div>
+
+				<div class="private radio-selector">
+					
+					<div class="radio-circle"><input type="radio" name="fulltime" class="border-none"></div>
+					<label for="radio" id="private" class="radio-lable">Private
+					</label>
+					
+				</div>
+			</div>
+			
+		</div>
+
+
+	</div>
+
+	<div id="tailorListContainer"></div>
+
+	<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="fo-col-1">
+                <h3>Contact Us</h3>
+                <p>Welcome to StitchXcel, your one-stop destination for professional tailor services.<br> We take pride
+                    in
+                    crafting exquisite
+                    outfits that elevate your style and enhance<br> your confidence. Whether it's custom tailoring,
+                    alterations,
+                    or wedding
+                    attire.</p>
+            </div>
+            <div class="fo-col-2">
+                <h3>Legal Links</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li>Tailors</li>
+                    <li>Join Us</li>
+                    <li>Blogs</li>
+                </ul>
+            </div>
+            <div class="fo-col-3">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 25 25">
+                            <path fill="currentColor"
+                                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+                        </svg>
+                         
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 15 15">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M12.91 12.909c.326-.327.582-.72.749-1.151c.16-.414.27-.886.302-1.578c.032-.693.04-.915.04-2.68c0-1.765-.008-1.987-.04-2.68c-.032-.692-.142-1.164-.302-1.578a3.185 3.185 0 0 0-.75-1.151a3.187 3.187 0 0 0-1.151-.75c-.414-.16-.886-.27-1.578-.302C9.487 1.007 9.265 1 7.5 1c-1.765 0-1.987.007-2.68.04c-.692.03-1.164.14-1.578.301a3.2 3.2 0 0 0-1.151.75a3.2 3.2 0 0 0-.75 1.151c-.16.414-.27.886-.302 1.578C1.007 5.513 1 5.735 1 7.5c0 1.765.007 1.987.04 2.68c.03.692.14 1.164.301 1.578c.164.434.42.826.75 1.151c.325.33.718.586 1.151.75c.414.16.886.27 1.578.302c.693.031.915.039 2.68.039c1.765 0 1.987-.008 2.68-.04c.692-.03 1.164-.14 1.578-.301a3.323 3.323 0 0 0 1.151-.75ZM2 6.735v1.53c-.002.821-.002 1.034.02 1.5c.026.586.058 1.016.156 1.34c.094.312.199.63.543 1.012c.344.383.675.556 1.097.684c.423.127.954.154 1.415.175c.522.024.73.024 1.826.024H8.24c.842.001 1.054.002 1.526-.02c.585-.027 1.015-.059 1.34-.156c.311-.094.629-.2 1.011-.543c.383-.344.556-.676.684-1.098c.127-.422.155-.953.176-1.414C13 9.247 13 9.04 13 7.947v-.89c0-1.096 0-1.303-.023-1.826c-.021-.461-.049-.992-.176-1.414c-.127-.423-.3-.754-.684-1.098c-.383-.344-.7-.449-1.011-.543c-.325-.097-.755-.13-1.34-.156A27.29 27.29 0 0 0 8.24 2H7.057c-1.096 0-1.304 0-1.826.023c-.461.021-.992.049-1.415.176c-.422.128-.753.301-1.097.684c-.344.383-.45.7-.543 1.012c-.098.324-.13.754-.156 1.34c-.022.466-.022.679-.02 1.5ZM7.5 5.25a2.25 2.25 0 1 0 0 4.5a2.25 2.25 0 0 0 0-4.5ZM4.25 7.5a3.25 3.25 0 1 1 6.5 0a3.25 3.25 0 0 1-6.5 0Zm6.72-2.72a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                         
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="25" viewBox="0 0 48 48">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                d="M38.74 16.55v1c0 10.07-7.64 21.61-21.62 21.61A21.14 21.14 0 0 1 5.5 35.71a12.22 12.22 0 0 0 1.81.11a15.25 15.25 0 0 0 9.44-3.24a7.56 7.56 0 0 1-7.1-5.29a6.9 6.9 0 0 0 1.44.15a7.53 7.53 0 0 0 2-.27A7.57 7.57 0 0 1 7 19.72v-.1a7.42 7.42 0 0 0 3.44.94A7.54 7.54 0 0 1 8.05 10.5a21.58 21.58 0 0 0 15.68 7.94a6.38 6.38 0 0 1-.21-1.74a7.55 7.55 0 0 1 13.17-5.31a15.59 15.59 0 0 0 4.83-1.85a7.65 7.65 0 0 1-3.39 4.27a15.87 15.87 0 0 0 4.37-1.26a15.56 15.56 0 0 1-3.76 4Z" />
+                        </svg>
+                         
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2023 - StitchXcel (Tailor Services)
+        </p>
+    </div>
+</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script>
+        // Function to display tailor details
+        function displayTailors(tailors) {
+            const tailorListContainer = $("#tailorListContainer");
+
+            // Loop through the tailor data and create HTML elements for each tailor
+            tailors.forEach(function (tailor) {
+				const tailorIdString = tailor._id["$oid"];
+				console.log(tailorIdString);
+                const tailorListing = `
+                    <div class="tailor-listing">
+                        <div class="tailor-cover-photo flex-item item1">
+                            <img src="static/images/s1.avif">
+                        </div>
+                        <div class="tailor-info flex-item item2">
+                            <h2 class="tailor-shop-name">${tailor.shop_name}</h2>
+                            <sub>by ${tailor.first_name} ${tailor.last_name}</sub>
+                            <h2><b>Contact:</b> ${tailor.contact}</h2>
+                            <h2>Address:</h2>
+                            <p class="tailor-address">${tailor.address}</p>
+                            <div class="hidden-rating">
+                                <div class="hidden-rating-image">
+                                    <img src="static/images/stars-ratings.png">
+                                </div>
+                                <div>
+                                    <button onclick="redirectToPostOrder('${tailor._id["$oid"]}')">Start Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tailor-rating flex-item item3">
+                            <div class="favorities-section">
+                                <img src="static/images/favorities-icon.png">
+                            </div>
+                            <div class="price-rating-section">
+                                <p>from $20</p>
+                                <img src="static/images/stars-ratings.png">
+                                <p class="fade">2.1K Sales</p>
+                                <p class="fade">Last updated: 15 Jan 19</p>
+                                <div>
+                                    <button onclick="redirectToPostOrder('${tailor._id["$oid"]}')">Start Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                tailorListContainer.append(tailorListing);
+            });
+        }
+
+        // Function to redirect to the post_order.html page with the tailor's ID
+        function redirectToPostOrder(tailorId) {
+            //store tailor id in a session and get it on post_order.html file
+			localStorage.setItem("tailorId", tailorId);
+            window.location.href = "/post_order";
+        }
+
+        $(document).ready(function () {
+            // Fetch tailor data from the API endpoint
+            $.ajax({
+                type: "GET",
+                url: "/api/tailors", // Replace this with the actual URL for fetching tailor data in your Flask app
+                dataType: "json",
+                success: function (response) {
+                    // Handle success response
+                    displayTailors(response);
+                },
+                error: function (xhr, status, error) {
+                    // Handle error response
+                    alert("Failed to fetch tailor data.");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

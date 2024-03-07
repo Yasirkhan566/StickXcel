@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>place Order</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+	
+</head>
+<body>
+
+	<header>
+    <img src="static/images/logo.png" height="75px" width="75px" alt="logo" class="main-logo-pic">
+    <h1 class="logoh1">StitchXcel</h1>
+    <nav>
+     
+        
+      <div class="menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links">
+        <img src="static/images/logo.png" height="70px" width="70px"    alt="logo" class="inner-logo-pic">
+        <h2 class="innerlogoh1">StitchXcel</h2>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/tailor" id = "tailor">Tailors</a></li>
+        <li><a href="/about"  id = "about">About</a></li>
+        <li><a href="/login" id="join">Join Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--------------------------------------------Slider------------------------------------------->
+
+<div class="measurement-guide">
+	<h3>Follow These Guides</h3>
+  <!-- Container for the image gallery -->
+<div class="slider-container">
+
+<!-- Full-width images with number text -->
+<div class="mySlides">
+  <div class="numbertext">1 / 6</div>
+	<img src="static/images/waist.webp" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">2 / 6</div>
+	<img src="static/images/chest.webp" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">3 / 6</div>
+	<img src="static/images/neck.webp" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">4 / 6</div>
+	<img src="static/images/sholder-width.webp" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">5 / 6</div>
+	<img src="static/images/hip.webp" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">6 / 6</div>
+	<img src="static/images/shirt-length.webp" style="width:100%">
+</div>
+
+<!-- Next and previous buttons -->
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<!-- Image text -->
+<div class="caption-container">
+  <p id="caption"></p>
+</div>
+
+<!-- Thumbnail images -->
+<div class="row">
+  <div class="column">
+	<img class="demo cursor" src="static/images/waist.webp" style="width:100%" onclick="currentSlide(1)" alt="The waist measurement is taken as a circumference measurement around your waist just above your belly button. Stand in a relaxed posture and breathe out">
+  </div>
+  <div class="column">
+	<img class="demo cursor" src="static/images/chest.webp" style="width:100%" onclick="currentSlide(2)" alt="The chest measurement is taken as a circumference measurement around your chest at the widest point. Stand in a relaxed posture and breathe out.">
+  </div>
+  <div class="column">
+	<img class="demo cursor" src="static/images/neck.webp" style="width:100%" onclick="currentSlide(3)" alt="The neck measurement is taken around the neck with the tape resting on your shoulders. You should put one finger between the tape and the neck if you want to allow for some extra room.">
+  </div>
+  <div class="column">
+	<img class="demo cursor" src="static/images/sholder-width.webp" style="width:100%" onclick="currentSlide(4)" alt="Think of a line going from your armpit straight upwards to your shoulder. Measure between those two points and hold the tape measure straight.">
+  </div>
+  <div class="column">
+	<img class="demo cursor" src="static/images/hip.webp" style="width:100%" onclick="currentSlide(5)" alt="The hip measurement is taken simply as a circumference measurement around your hips at the widest part.">
+  </div>
+  <div class="column">
+	<img class="demo cursor" src="static/images/shirt-length.webp" style="width:100%" onclick="currentSlide(6)" alt="The shirt length measurement is taken from the top of the shoulder, close to the mid side of your neck, following your body down to the point where you want your shirt to end.">
+  </div>
+  <div class="column">
+	<img class="demo cursor" src="static/images/seat.webp" style="width:100%" onclick="currentSlide(7)" alt="The seat measurement is taken as a circumference measurement around your seat at the widest part.">
+  </div>
+  <div class="column">
+	<img class="demo cursor" src="static/images/arm-length.webp" style="width:100%" onclick="currentSlide(7)" alt="The sleeve length measurement is taken from the point of your shoulder (where you took the shoulder width measurement), following your bent arm down to where you want the sleeve to end.">
+  </div>
+</div>
+</div>
+		  
+	  
+</div>
+	<h2 class="form-heading">Fill Out the Form</h2>
+	<div class="order-section">
+
+		<form class="order-form" id="order-form">
+			<h3>Personal Details</h3>
+			<div class="flex">
+				<div class="columns">
+					<label for="name">
+						Name
+					</label>
+					<input type="name" name="name" id="name">
+				</div>
+
+				<div class="columns">
+					<label for="phone">
+						Phone
+					</label>
+					<input type="Phone" name="phone" id="phone">
+				</div>
+			</div>
+			<hr>
+			<h3>Suite Detials</h3>
+
+			<div class="garment details flex">
+
+				<div class="columns">
+					<label for="category">
+						Category
+					</label>
+					<select id="category">
+						<option value="">Select Category</option>
+				        <option value="3piece">3 Piece</option>
+				        <option value="kurtapajama">Kurta Pajama</option>
+				        <option value="Shalwarkmeez">Shalwar Kameez</option>
+				        <option value="sherwani">Shewani</option>
+					</select>
+				</div>
+
+				<div class="columns">
+
+					<label for="fabrictype">
+						Fabric Type
+					</label>
+					<input type="text" name="fabrictype" id="fabrictype" placeholder="Select Fabric Type">
+				</div>
+
+				<div class="columns">
+					<label for="garmentstyle">
+						Garment Style
+					</label>
+					<input type="text" name="garmentstyle" id="garmentstyle" placeholder="Garment Style">
+				</div>
+
+
+				<div class="columns">
+					<label for="corler">
+						Corlor Type
+					</label>
+					<select id="corler">
+						<option>Select Corlor Type</option>
+						<option value="ban">Ban</option>
+						<option value="Corler">Corler</option>
+					</select>
+				</div>
+
+
+				<div class="columns">
+					<label for="kuff">
+						Kuff Style
+					</label>
+					<select id="kuff">
+						<option>Select Kuff Style</option>
+						<option value="rounded">Slightly Rounded</option>
+						<option value="edged">Edged</option>
+					</select>
+					
+				</div>
+			</div>
+			<hr>
+			<h3>Measurement Details</h3>
+			<div class="measurement-details">
+				<div class="flex">
+					<div class="columns">
+						<label for="shirt-length">
+							Shirt Length
+						</label>
+						<input type="number" name="shirt-length" id="shirt-length" placeholder="Shirt Length (inches)">
+
+					</div>
+
+					<div class="columns">
+						<label for="chest">
+							Chest
+						</label>
+						<input type="number" name="chest" id="chest" placeholder="Chest (inches)">
+					</div>
+
+					<div class="columns">
+						<label for="sholder-width">
+							Sholder Width
+						</label>
+
+						<input type="number" name="sholder-width" id="shoulder-width" placeholder="Sholder Width (inches)">
+					</div>
+
+					<div class="columns">
+						<label for="arm-length">
+							Arm Length
+						</label>
+						<input type="number" name="arm-length" id="arm-length" placeholder="Arm Length (inches)">
+					</div>
+
+					<div class="columns">
+						<label for="wrist">
+							Wrist
+						</label>
+						<input type="number" name="wrist" id="wrist" placeholder="wrist (inches)">
+
+					</div>
+
+					<div class="columns">
+						<label for="waist">
+							Waist
+						</label>
+						<input type="number" name="waist" id="waist" placeholder="waist (inches)">
+
+					</div>
+
+					<div class="columns">
+						<label for="hip">
+							Hip
+						</label>
+						<input type="number" name="hip" id="hip" placeholder="hip (inches)">
+					</div>
+
+					<div class="columns">
+						<label for="seat">
+							Seat
+						</label>
+						<input type="number" name="seat" id="seat" placeholder="seat (inches)">
+					</div>
+
+					<div class="columns">
+						<label for="pants-length">
+							Pants Length
+						</label>
+						<input type="number" name="pants-length" id="pants-length" placeholder="Pants Length (inches)">
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<hr>
+
+			<h3>Address Details</h3>
+
+			<div class="address-details">
+				<div class="flex">
+					<div class="columns">
+						<label for="city">City</label>
+						<input type="text" name="city" id="city">
+					</div>
+
+					<div class="columns">
+						<label for="country">Country</label>
+						<input type="text" name="country" id="country">
+					</div>
+
+					<div class="columns">
+						<label for="home-town">Home Town</label>
+						<input type="text" name="home-town" id="home-town">
+					</div>
+
+					<div class="columns">
+						<label for="zip-code">Zip Code</label>
+						<input type="text" name="zip-code" id="zip-code">
+					</div>
+				</div>
+			</div>
+
+			<label for="address-one">Address Line 1</label>
+			<input type="text" name="address-one" id="address-one" class="full-width">
+
+			<label for="address-two">Address Line2</label>
+			<input type="text" name="address-two" id="address-two" class="full-width">
+
+			<button id="submit" class="submit-btn">Submit</button>
+		</form>
+
+	
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="fo-col-1">
+					<h3>Contact Us</h3>
+					<p>Welcome to StitchXcel, your one-stop destination for professional tailor services.<br> We take pride
+						in
+						crafting exquisite
+						outfits that elevate your style and enhance<br> your confidence. Whether it's custom tailoring,
+						alterations,
+						or wedding
+						attire.</p>
+				</div>
+				<div class="fo-col-2">
+					<h3>Legal Links</h3>
+					<ul>
+						<li>About Us</li>
+						<li>Tailors</li>
+						<li>Join Us</li>
+						<li>Blogs</li>
+					</ul>
+				</div>
+				<div class="fo-col-3">
+					<h3>Follow Us</h3>
+					<ul>
+						<li>
+							<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 25 25">
+								<path fill="currentColor"
+									d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+							</svg>
+							
+						</li>
+						<li>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 15 15">
+								<path fill="currentColor" fill-rule="evenodd"
+									d="M12.91 12.909c.326-.327.582-.72.749-1.151c.16-.414.27-.886.302-1.578c.032-.693.04-.915.04-2.68c0-1.765-.008-1.987-.04-2.68c-.032-.692-.142-1.164-.302-1.578a3.185 3.185 0 0 0-.75-1.151a3.187 3.187 0 0 0-1.151-.75c-.414-.16-.886-.27-1.578-.302C9.487 1.007 9.265 1 7.5 1c-1.765 0-1.987.007-2.68.04c-.692.03-1.164.14-1.578.301a3.2 3.2 0 0 0-1.151.75a3.2 3.2 0 0 0-.75 1.151c-.16.414-.27.886-.302 1.578C1.007 5.513 1 5.735 1 7.5c0 1.765.007 1.987.04 2.68c.03.692.14 1.164.301 1.578c.164.434.42.826.75 1.151c.325.33.718.586 1.151.75c.414.16.886.27 1.578.302c.693.031.915.039 2.68.039c1.765 0 1.987-.008 2.68-.04c.692-.03 1.164-.14 1.578-.301a3.323 3.323 0 0 0 1.151-.75ZM2 6.735v1.53c-.002.821-.002 1.034.02 1.5c.026.586.058 1.016.156 1.34c.094.312.199.63.543 1.012c.344.383.675.556 1.097.684c.423.127.954.154 1.415.175c.522.024.73.024 1.826.024H8.24c.842.001 1.054.002 1.526-.02c.585-.027 1.015-.059 1.34-.156c.311-.094.629-.2 1.011-.543c.383-.344.556-.676.684-1.098c.127-.422.155-.953.176-1.414C13 9.247 13 9.04 13 7.947v-.89c0-1.096 0-1.303-.023-1.826c-.021-.461-.049-.992-.176-1.414c-.127-.423-.3-.754-.684-1.098c-.383-.344-.7-.449-1.011-.543c-.325-.097-.755-.13-1.34-.156A27.29 27.29 0 0 0 8.24 2H7.057c-1.096 0-1.304 0-1.826.023c-.461.021-.992.049-1.415.176c-.422.128-.753.301-1.097.684c-.344.383-.45.7-.543 1.012c-.098.324-.13.754-.156 1.34c-.022.466-.022.679-.02 1.5ZM7.5 5.25a2.25 2.25 0 1 0 0 4.5a2.25 2.25 0 0 0 0-4.5ZM4.25 7.5a3.25 3.25 0 1 1 6.5 0a3.25 3.25 0 0 1-6.5 0Zm6.72-2.72a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5Z"
+									clip-rule="evenodd" />
+							</svg>
+							
+						</li>
+						<li>
+							<svg xmlns="http://www.w3.org/2000/svg" width="45" height="25" viewBox="0 0 48 48">
+								<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+									d="M38.74 16.55v1c0 10.07-7.64 21.61-21.62 21.61A21.14 21.14 0 0 1 5.5 35.71a12.22 12.22 0 0 0 1.81.11a15.25 15.25 0 0 0 9.44-3.24a7.56 7.56 0 0 1-7.1-5.29a6.9 6.9 0 0 0 1.44.15a7.53 7.53 0 0 0 2-.27A7.57 7.57 0 0 1 7 19.72v-.1a7.42 7.42 0 0 0 3.44.94A7.54 7.54 0 0 1 8.05 10.5a21.58 21.58 0 0 0 15.68 7.94a6.38 6.38 0 0 1-.21-1.74a7.55 7.55 0 0 1 13.17-5.31a15.59 15.59 0 0 0 4.83-1.85a7.65 7.65 0 0 1-3.39 4.27a15.87 15.87 0 0 0 4.37-1.26a15.56 15.56 0 0 1-3.76 4Z" />
+							</svg>
+							
+						</li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<p class="copyright">Copyright 2023 - StitchXcel (Tailor Services)
+			</p>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Handle form submission
+        $("#submit").click(function (event) {
+            event.preventDefault();
+            console.log("HI");
+			const tailorId = localStorage.getItem("tailorId");
+            // Get form data for Order
+            const orderData = {
+				tailor: tailorId,
+                name: $("#name").val(),
+                phone: $("#phone").val(),
+                category: $("#category").val(),
+                fabric_type: $("#fabrictype").val(),
+                garment_style: $("#garmentstyle").val(),
+                color_type: $("#corler").val(),
+                kuff_style: $("#kuff").val(),
+            };
+
+            // Get form data for Measurement
+            var measurementData = {
+				tailor: tailorId,
+                shirt_length: $("#shirt-length").val(),
+                chest: $("#chest").val(),
+                shoulder_width: $("#shoulder-width").val(),
+                arm_length: $("#arm-length").val(),
+                wrist: $("#wrist").val(),
+                waist: $("#waist").val(),
+                hip: $("#hip").val(),
+                seat: $("#seat").val(),
+                pants_length: $("#pants-length").val(),
+            };
+
+            // Get form data for DeliveryAddress
+            const deliveryAddressData = {
+				tailor: tailorId,
+                city: $("#city").val(),
+                country: $("#country").val(),
+                home_town: $("#home-town").val(),
+                zip_code: $("#zip-code").val(),
+                address1: $("#address-one").val(),
+                address2: $("#address-two").val(),
+            };
+			console.log(orderData, '\n\n\n',measurementData, '\n\n\n\n', deliveryAddressData)
+
+            // Send form data to server using Ajax
+            // Send form data to server for Order
+            $.ajax({
+                type: "POST",
+                url: "/api/order", // Endpoint for Order
+                data: JSON.stringify(orderData),
+                contentType: "application/json",
+                dataType: "json",
+                success: function (response) {
+                    // Handle success response
+					id = response.order_id;
+					measurementData['order'] = id
+					$.ajax({
+						type: "POST",
+						url: "/api/measurement", // Endpoint for Measurement
+						data: JSON.stringify(measurementData),
+						contentType: "application/json",
+						dataType: "json",
+						success: function (response) {
+							// Handle success response
+							console.log("Measurement data submitted successfully!");
+						},
+						error: function (xhr, status, error) {
+							// Handle error response
+							console.error("Failed to submit Measurement data.");
+							window.location.href = "/login";
+						}
+            		});
+                    alert("Order submitted successfully!");
+                },
+                error: function (xhr, status, error) {
+                    // Handle error response
+                    console.error("Failed to submit Order data.");
+                    window.location.href = "/login";
+                }
+            });
+
+            // Send form data to server for Measurement
+            
+
+            // Send form data to server for DeliveryAddress
+            $.ajax({
+                type: "POST",
+                url: "/api/delivery_address", // Endpoint for DeliveryAddress
+                data: JSON.stringify(deliveryAddressData),
+                contentType: "application/json",
+                dataType: "json",
+                success: function (response) {
+                    // Handle success response
+                    console.log("DeliveryAddress data submitted successfully!");
+					window.location.href = "/tailor";
+                },
+                error: function (xhr, status, error) {
+                    // Handle error response
+                    console.error("Failed to submit DeliveryAddress data.");
+                    window.location.href = "/login";
+                }
+            });
+        });
+    });
+</script>
+
+	
+</body>
+</html>
